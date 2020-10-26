@@ -1,0 +1,68 @@
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin min-max($min-width, $max-width, $padding) {
+  min-width: $min-width;
+  max-width: $max-width;
+  padding: 0 $padding;
+  margin: 0 auto;
+}
+
+@mixin adaptive-video() {
+  position: relative;
+  padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0,0,0,0);
+  overflow: hidden;
+}
+
+@mixin button($bgc: $second, $borderColor: transparent){
+  background-color: $bgc;
+  border: 2px solid $borderColor;
+  color: $white;
+  border-radius: 5px;
+  width: 170px;
+  padding: 15px 0;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Raleway";
+  font-weight: 800;
+  text-transform: uppercase;
+  display: block;
+  cursor: pointer;
+  transition-property: background-color, border-color;
+  transition-duration: 0.3s, 0.3s;
+  &:hover, &:active{
+    background-color: darken($bgc, 15%);
+    border-color: darken($borderColor, 15%);
+  }
+}

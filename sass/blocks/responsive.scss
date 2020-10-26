@@ -1,0 +1,55 @@
+$textColor: #464646;
+$bgButton: #8dc63f;
+.responsive__wrap{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: url('../img/bg-two.png') left bottom  no-repeat;
+}
+.responsive__information{
+    max-width: 360px;
+    margin-left: auto;
+}
+.responsive__title{
+    margin: 20px 0;
+    font-size: 30px;
+    font-family: "Raleway";
+    color: $white;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+    &::before{
+        content: '';
+        background-color: #2f2f2f;
+        display: block;
+        width: 70px;
+        height: 2px;
+        margin-bottom: 20px;
+    }
+}
+.responsive__text{
+    font-size: 14px;
+    font-family: "Roboto";
+    color: $textColor;
+    line-height: 1.429;
+    margin: 20px 0;
+}
+.responsive__button{
+    margin-top: 40px;
+    margin-left: 20px;
+    @include button($bgButton);
+}
+
+@media(max-width:980px){
+    .responsive__information{
+        max-width: 100%;
+    }
+    .responsive__wrap{
+        background: none;
+    }
+}
+@media(max-width:480px){
+    .responsive__wrap{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}

@@ -1,0 +1,87 @@
+.banner{
+    min-height: 795px;
+    background-image: url('../img/bg-man.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 5px -5px;
+}
+.banner__wrap{
+    padding: 0;
+    padding-top: 250px;
+}
+.banner__info{
+    max-width: 580px;
+    margin-left: auto;
+}
+.banner__title{
+    margin: 0;
+    padding: 0;
+    font-size: 80px;
+    font-family: "Raleway";
+    color: $white;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1;
+    padding-left: 5px;
+    padding-bottom: 12px;
+}
+.banner__little{
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-size: 43px;
+}
+.banner__red{
+    color:$second;
+}
+.banner__desc{
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    margin-bottom: 38px;
+    font-size: 18px;
+    font-family: "Raleway";
+    color: rgb(85, 85, 85);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.333;
+}
+ .banner__action{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+}
+.banner__btn--buy{
+   @include button();
+   margin-right: 30px;
+}
+
+.banner__btn--live{
+    @include button(transparent, $white);
+ }
+ @media(max-width:890px){
+    .banner{
+        min-height: 500px;
+        background: none;
+    }
+    .banner__wrap{
+        padding-top: 150px;
+    }
+    .banner__info{
+        margin-right: auto;
+    }
+ }
+
+ @media(max-width:680px){
+    .banner__title{
+        font-size: 50px;
+    }
+    .banner__little{
+        font-size: 30px;
+    }
+    .banner__desc{
+        font-size: 16px;
+        line-height: 1.2;
+    }
+ }

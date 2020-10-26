@@ -1,0 +1,85 @@
+$circleColor: #363636;
+$iconColor: #636363;
+$titleColor: #636363;
+$textColor: #555555;
+.advantages__vh{
+    @include visually-hidden();
+}
+.advantages__list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+    grid-column-gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding-bottom: 65px;
+    padding-top: 72px;
+    padding-left: 8.9px;
+}
+.advantages__item{
+    &:hover{
+        .advantages__img{
+            border: 1px solid $second;
+        }
+        .advantages__svg{
+            fill: $second;
+        }
+        .advantages__title{
+            color: $second;
+        }
+        .advantages__desc{
+            color: $white;
+        }
+    }
+}
+.advantages__img{
+    width: 104px;
+    height: 104px;
+    margin: 0;
+    margin-bottom: 25px;
+    position: relative;
+    border: 1px solid $circleColor;
+    border-radius: 50%;
+    transition-property: border-color;
+    transition-duration: 0.3s;
+}
+.advantages__svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    fill: $iconColor;
+    transition-property: fill;
+    transition-duration: 0.3s;
+}
+.advantages__title{
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-family: "Raleway";
+    color: $titleColor;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.111;
+    transition-property: color;
+    transition-duration: 0.3s;
+}
+.advantages__desc{
+    margin: 0;
+    font-size: 14px;
+    font-family: "Roboto";
+    font-weight: 400;
+    color: $textColor;
+    line-height: 1.429;
+    transition-property: color;
+    transition-duration: 0.3s;
+    &::after{
+        content: '';
+        width: 70px;
+        height: 2px;
+        background-color: $second;
+        display: block;
+        margin-top: 25px;
+    }
+}
+

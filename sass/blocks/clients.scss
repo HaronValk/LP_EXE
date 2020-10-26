@@ -1,0 +1,56 @@
+$bgcColor: #202020;
+$lineColor: #2f2f2f;
+$textColor: #464646;
+.clients{
+    background-color: $bgcColor;
+}
+.clients__wrap{
+    padding-top: 55px;
+    padding-bottom: 80px;
+}
+.clients__title{
+    margin: 25px 0;
+    font-size: 30px;
+    font-family: "Raleway";
+    color: $white;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-align: center;
+    &::before{
+        display: block;
+        content: '';
+        background-color: $lineColor;
+        width: 70px;
+        height: 2px;
+        margin: 0 auto 25px;
+    }
+}
+
+.clients__text{
+    margin: 25px auto;
+    max-width: 555px;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: $textColor;
+    line-height: 1.429;
+    text-align: center;
+}
+.clients__carousel{
+    margin: 50px 0;
+    padding-left: 110px;
+    padding-right: 110px;
+}
+
+@media(max-width:980px){
+    .clients__carousel{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+@media(max-width:480px){
+    .clients__wrap{
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+}
